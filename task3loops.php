@@ -297,7 +297,7 @@ echo"<br>";
 // 12. Write a PHP program to print the following pattern.  
     
 // Expected Output: 
- 
+
 //      A  
 //     A B  
 //    A B C  

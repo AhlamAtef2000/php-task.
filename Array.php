@@ -275,31 +275,25 @@ $filteredArray = array_filter($array1, function($value) {
 });
 
 // العثور على أصغر عدد في المصفوفة بعد إزالة الأصفار
-$lowest = min($filteredArray);
-
-// طباعة النتيجة
-echo $lowest;
-echo"<br>";
+ $lowest = min($filteredArray);
+ echo $lowest;
+ echo"<br>";
 
 // 15.	Write a PHP program to sort an array of positive integers using the any Sort Algorithm.          
 // Input array : Array ( [0] => 5 / [1] => 3 / [2] => 1 / [3] => 3 / [4] => 8 / [5] => 7 / [6] => 4 / [7] => 1/ [8] => 1 / [9] => 3 )
 // Expected Result : Array ( [0] => 8 / [1] => 7 / [2] => 5 / [3] => 4 / [4] => 3 / [5] => 3 / [6] => 3 / [7] => 1 [8] => 1/ [9] => 1 )
 echo"<br>";
-$array = array(5, 3, 1, 3, 8, 7, 4, 1, 1, 3);
-
-// دالة مقارنة مخصصة لترتيب المصفوفة من الأكبر إلى الأصغر
-usort($array, function($a, $b) {
+  $array = array(5, 3, 1, 3, 8, 7, 4, 1, 1, 3);
+  usort($array, function($a, $b) {
     return $b - $a; // الترتيب من الأكبر إلى الأصغر
-});
-
-// طباعة المصفوفة بعد الترتيب
-print_r($array);
+  });
+  print_r($array);
 echo"<br>";
 
 
 
 
-// 16.	Write a PHP function to floor decimal numbers with precision. Note: Accept three parameters number, precision, and $separator
+// note 16.	Write a PHP function to floor decimal numbers with precision. Note: Accept three parameters number, precision, and $separator
 // Sample Data : 
 // 1.155, 2, "."
 // 100.25781, 4, "."
@@ -310,23 +304,20 @@ echo"<br>";
 // -2.964
 
 
-
-
-
-function floorDecimal($number, $precision, $separator) {
-    // استخدام round لتقريب العدد بناءً على الدقة المحددة
-    $roundedNumber = round($number, $precision);
+// function floorDecimal($number, $precision, $separator) {
+//     // استخدام round لتقريب العدد بناءً على الدقة المحددة
+//     $roundedNumber = round($number, $precision);
     
-    // تحويل الرقم إلى سلسلة واستخدام الفاصل المحدد بين الجزء الصحيح والعشري
-    $formattedNumber = number_format($roundedNumber, $precision, $separator, '');
+//     // تحويل الرقم إلى سلسلة واستخدام الفاصل المحدد بين الجزء الصحيح والعشري
+//     $formattedNumber = number_format($roundedNumber, $precision, $separator, '');
     
-    return $formattedNumber;
-}
+//     return $formattedNumber;
+// }
 
-// اختبار الدالة مع البيانات المدخلة
-echo floorDecimal(1.155, 2, '.') . "<br>";      // النتيجة: 1.15
-echo floorDecimal(100.25781, 4, '.') . "<br>"; // النتيجة: 100.2578
-echo floorDecimal(-2.9636, 3, '.') . "<br>";
+// // اختبار الدالة مع البيانات المدخلة
+// echo floorDecimal(1.155, 2, '.') . "<br>";      // النتيجة: 1.15
+// echo floorDecimal(100.25781, 4, '.') . "<br>"; // النتيجة: 100.2578
+// echo floorDecimal(-2.9636, 3, '.') . "<br>";
 
 
 
